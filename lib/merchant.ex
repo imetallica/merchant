@@ -1,0 +1,2 @@
+defmodule Merchant do
+end
