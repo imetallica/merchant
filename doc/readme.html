@@ -65,8 +65,27 @@
 <p><strong>Use various payment gateways directly into your project</strong></p>
 <h2 id="installation"> Installation</h2><p>Add merchant to your list of dependencies in <code class="inline">mix.exs</code>:</p>
 <pre><code class="elixir">    def deps do
-      [{:merchant, &quot;~&gt; 0.0.1&quot;}]
+      [{:merchant, &quot;~&gt; 0.0.1-alpha&quot;}]
     end</code></pre>
+<h2 id="implementation-details"> Implementation details</h2><p>This library integrates with the payment gateways via REST APIs. It also
+has helpers to help you integrate easily with your current application.</p>
+<h2 id="roadmap"> Roadmap</h2><p>Merchant has in mind an easy way to allow developers to implement their 
+own payment gateways and more credit cards. </p>
+<ul>
+<li>Luhn’s Algorithm                [OK]
+</li>
+<li>Support for Visa                [OK]
+</li>
+<li>Support for MasterCard          [OK]
+</li>
+<li>Support for American Express    [NOT STARTED]
+</li>
+<li>PayPal support                  [IN PROGRESS]
+</li>
+<li>Stripe support                  [NOT STARTED]
+</li>
+</ul>
+<h2 id="support-and-contributing"> Support and contributing</h2><p>You can always do pull requests and fill in eventual issues.</p>
 
     <footer class="footer">
       <p>
