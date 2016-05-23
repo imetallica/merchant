@@ -14,8 +14,8 @@ end
 
 defimpl Merchant.CreditCard, for: Any do
   @doc """
-   Checks if the credit card is valid.
-   """
+  Checks if the credit card is valid.
+  """
   def valid?(card) do
     case regex_valid?(card) do
       true -> card |> digits |> checksum
@@ -27,7 +27,7 @@ defimpl Merchant.CreditCard, for: Any do
   defp regex_valid?(card) do
     case Regex.regex?(card.regex) do
       true -> Regex.match?(card.regex, card.number)
-      _ -> raise "Card Regex is invalid."
+      _ -> raise Merchant.Exceptions.CreditCard.InvalidRegexError
     end
   end
 
