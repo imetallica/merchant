@@ -10,7 +10,7 @@ defmodule Merchant.Gateway do
       def purchase(transaction, card), do: false
 
 
-      def get_auth_token, do: raise Merchant.Gateway.CardNotSupported
+      def get_auth_token, do: raise CardNotSupported
       defp process_response(resp), do:  raise NotImplemented
 
       defp idempotency do
