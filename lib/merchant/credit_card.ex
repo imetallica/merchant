@@ -1,4 +1,5 @@
 defprotocol Merchant.CreditCard do
+  @fallback_to_any true
   @moduledoc """
   Implement this Protocol for credit cards.
   More information about the implementation can be found [here](https://en.wikipedia.org/wiki/Luhn_algorithm).

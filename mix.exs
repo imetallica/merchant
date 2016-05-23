@@ -20,12 +20,13 @@ defmodule Merchant.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :httpoison]]
   end
 
   defp deps do
     [{:decimal, "~> 1.1"},
      {:earmark, ">= 0.0.0"},
+     {:httpoison, "~> 0.8.3"},
      {:ex_doc, "~> 0.11", only: [:docs, :dev]},
      {:credo, "~> 0.3", only: [:dev, :test]},
     ]
