@@ -5,4 +5,4 @@ otp_release:
   - 18.2.1
 install:
   - mix local.hex --force
-script: "MIX_ENV=dev mix do deps.get, compile"
+script: "mix do deps.get, test"
