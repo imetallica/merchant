@@ -1,7 +1,7 @@
 defmodule Merchant.Mixfile do
   use Mix.Project
 
-  @version "0.0.1-alpha"
+  @version "0.1.0"
   @url "https://github.com/imetallica/merchant"
   @maintainers [
     "Iuri L. Machado"

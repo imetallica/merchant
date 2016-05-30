@@ -1,4 +1,4 @@
-# Merchant
+# Merchant [![Build Status](https://travis-ci.org/imetallica/merchant.svg?branch=master)](https://travis-ci.org/imetallica/merchant)
 
 **Use various payment gateways directly into your project**
 
@@ -7,7 +7,7 @@
 Add merchant to your list of dependencies in `mix.exs`:
 ```
     def deps do
-      [{:merchant, "~> 0.0.1-alpha"}]
+      [{:merchant, "~> 0.1.0"}]
     end
 ```
 
@@ -27,7 +27,7 @@ own payment gateways.
   - Support for American Express    [OK]
   - Support for Diners Club         [OK]
   - Support for Discover            [OK]
-  - PayPal support                  [IN PROGRESS]
+  - PayPal support                  [COMPLETED]
   - Stripe support                  [NOT STARTED]
   
 ## Support and contributing
