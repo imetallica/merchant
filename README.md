@@ -19,12 +19,14 @@ has helpers to help you integrate easily with your current application.
 ## Roadmap
 
 Merchant has in mind an easy way to allow developers to implement their 
-own payment gateways and more credit cards. 
+own payment gateways. 
 
   - Luhn's Algorithm                [OK]
   - Support for Visa                [OK]
   - Support for MasterCard          [OK]
-  - Support for American Express    [NOT STARTED]
+  - Support for American Express    [OK]
+  - Support for Diners Club         [OK]
+  - Support for Discover            [OK]
   - PayPal support                  [IN PROGRESS]
   - Stripe support                  [NOT STARTED]
   

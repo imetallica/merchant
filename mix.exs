@@ -27,6 +27,7 @@ defmodule Merchant.Mixfile do
     [{:decimal, "~> 1.1"},
      {:earmark, ">= 0.0.0"},
      {:httpoison, "~> 0.8.3"},
+     {:poison, "~> 2.1"},
      {:ex_doc, "~> 0.11", only: [:docs, :dev]},
      {:credo, "~> 0.3", only: [:dev, :test]},
     ]

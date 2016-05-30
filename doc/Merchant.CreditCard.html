@@ -10,7 +10,7 @@
     
     <script src="dist/sidebar_items.js"></script>
   </head>
-  <body data-type="protocols">
+  <body data-type="modules">
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -47,9 +47,9 @@
     
 
     
-
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
     
-      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+
     
   </ul>
 
@@ -65,8 +65,6 @@
         <small class="visible-xs">Merchant v0.0.1-alpha</small>
         Merchant.CreditCard
         
-          <small>protocol</small>
-        
         
           <a href="https://github.com/imetallica/merchant/blob/master/lib/merchant/credit_card.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
@@ -74,12 +72,6 @@
         
       </h1>
 
-      
-        <section id="moduledoc" class="docstring">
-          <p>Implement this Protocol for credit cards.
-More information about the implementation can be found <a href="https://en.wikipedia.org/wiki/Luhn_algorithm">here</a>.</p>
-
-        </section>
       
 
       
@@ -91,19 +83,6 @@ More information about the implementation can be found <a href="https://en.wikip
             Summary
           </h1>
           
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
-  </div>
-  
-</div>
-
-  </div>
-
 
           
   <div class="summary-functions summary">
@@ -112,10 +91,19 @@ More information about the implementation can be found <a href="https://en.wikip
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#select_type/1">select_type(card)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks and sets the type of the credit card struct</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#valid?/1">valid?(card)</a>
   </div>
   
-    <div class="summary-synopsis"><p>This function checks if the card is valid by the informed regex into the Card struct and using the Luhn’s algorithm</p>
+    <div class="summary-synopsis"><p>Checks if the credit card numbers are valid with Luhn’s Algorithm</p>
 </div>
   
 </div>
@@ -130,22 +118,6 @@ More information about the implementation can be found <a href="https://en.wikip
         </section>
       
 
-      
-        <section id="types" class="types details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#types">
-              <i class="icon-link"></i>
-            </a>
-            Types
-          </h1>
-          <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: term</code></pre>
-  
-</div>
-
-          </div>
-        </section>
       
 
       
@@ -156,21 +128,39 @@ More information about the implementation can be found <a href="https://en.wikip
             </a>
             Functions
           </h1>
-          <div class="detail" id="valid?/1">
+          <div class="detail" id="select_type/1">
   <div class="detail-header">
-    <a href="#valid?/1" class="detail-link" title="Link to this function">
+    <a href="#select_type/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">valid?(card)</span>
+    <span class="signature">select_type(card)</span>
       
-      <a href="https://github.com/imetallica/merchant/blob/master/lib/merchant/credit_card.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/imetallica/merchant/blob/master/lib/merchant/credit_card.ex#L14" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>This function checks if the card is valid by the informed regex into the Card struct and using the Luhn’s algorithm.</p>
+    <p>Checks and sets the type of the credit card struct.</p>
+
+  </section>
+</div>
+<div class="detail" id="valid?/1">
+  <div class="detail-header">
+    <a href="#valid?/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">valid?(card)</span>
+      
+      <a href="https://github.com/imetallica/merchant/blob/master/lib/merchant/credit_card.ex#L28" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Checks if the credit card numbers are valid with Luhn’s Algorithm.</p>
 
   </section>
 </div>
