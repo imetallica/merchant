@@ -1,7 +1,8 @@
 defmodule PayPalTest do
   use ExUnit.Case
+  alias Merchant.Gateway.PayPal
 
-  @money %Merchant.Currency{type: "USD", amount: Decimal.new(45.21)}
+  @currency %Merchant.Currency{type: "USD", amount: Decimal.new(45.21)}
   @card %Merchant.CreditCard{
     number: "4929761476810483",
     type: :visa,
@@ -10,10 +11,24 @@ defmodule PayPalTest do
     expire_year: 2033,
   }
 
-  @authorization Merchant.Gateway.PayPal.authorize(@money, @card)
-  
-  test "Get authorization" do
-    assert {:ok, %Merchant.Gateway.PayPal.Authorization{}} = @authorization
-
+  setup do
+    {:ok, payment: PayPal.authorize(@card, @currency)}
   end
+
+  test "Get authorization", context do
+    assert %Merchant.Gateway.Payment{state: "approved"} = context[:payment]
+  end
+
+  test "Capture authorization", context do
+    assert %Merchant.Gateway.Payment{state: "completed"} = (context[:payment] |> PayPal.capture)
+  end
+
+  test "Void authorization", context do
+    assert %Merchant.Gateway.Payment{state: "voided"} = (context[:payment] |> PayPal.void)
+  end
+
+  test "Refund payment", context do
+    assert %Merchant.Gateway.Payment{state: "completed"} = (context[:payment] |> PayPal.capture |> PayPal.refund)
+  end
+
 end
