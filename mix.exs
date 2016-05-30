@@ -1,7 +1,7 @@
 defmodule Merchant.Mixfile do
   use Mix.Project
 
-  @version "0.0.1-alpha"
+  @version "0.1.0"
   @url "https://github.com/imetallica/merchant"
   @maintainers [
     "Iuri L. Machado"
@@ -20,12 +20,14 @@ defmodule Merchant.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :httpoison]]
   end
 
   defp deps do
     [{:decimal, "~> 1.1"},
      {:earmark, ">= 0.0.0"},
+     {:httpoison, "~> 0.8.3"},
+     {:poison, "~> 2.1"},
      {:ex_doc, "~> 0.11", only: [:docs, :dev]},
      {:credo, "~> 0.3", only: [:dev, :test]},
     ]
