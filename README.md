@@ -27,7 +27,7 @@ own payment gateways.
   - Support for American Express    [OK]
   - Support for Diners Club         [OK]
   - Support for Discover            [OK]
-  - PayPal support                  [COMPLETED]
+  - PayPal support                  [OK]
   - Stripe support                  [NOT STARTED]
   
 ## Support and contributing
