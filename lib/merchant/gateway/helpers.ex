@@ -13,6 +13,9 @@ defmodule Merchant.Gateway.Helpers do
   """
   def encode_credentials(cred), do: cred |> :base64.encode
 
+  @doc """
+  Encapsulates many kinds of responses and returns then in a standard fashion.
+  """
   def process_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}), do: {:ok, body}
   def process_response({:ok, %HTTPoison.Response{status_code: 201, body: body}}), do: {:ok, body}
   def process_response({:ok, %HTTPoison.Response{status_code: status_code, body: body}}), do: {:error, status_code, Poison.decode!(body)}
